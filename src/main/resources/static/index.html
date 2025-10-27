@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Address Book SPA</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JSController.js"></script>
+</head>
+<body>
+<h1>Address Books</h1>
+<div id="addressBooks"></div>
+<button onclick="createAddressBook()">Create Address Book</button>
+
+<h2>Add Buddy</h2>
+<input type="number" id="bookId" placeholder="Address Book ID" />
+<input type="text" id="buddyName" placeholder="Name" />
+<input type="text" id="buddyAddress" placeholder="Address" />
+<input type="text" id="buddyPhone" placeholder="Phone" />
+<button onclick="addBuddy()">Add Buddy</button>
+</body>
+</html>
