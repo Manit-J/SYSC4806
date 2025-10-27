@@ -1,10 +1,12 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>Home Page</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 <p th:text="|Hello, ${name}!|" />
+<a th:href="@{/viewAllAddressBooks}">View all address books</a>
+<a th:href="@{/createAddressBook}">Create an Address Book</a>
 </body>
 </html>

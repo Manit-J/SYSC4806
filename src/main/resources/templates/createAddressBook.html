@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>View Address Book</title>
+    <title>Create Address Book</title>
     <meta charset="UTF-8"/>
 </head>
 <body>
 <a href="/">Home</a>
-
 <h1>Address Book ID: <span th:text="${addressBook.id}"></span></h1>
-<h2>Buddies:</h2>
+<h2>List of Buddies:</h2>
 <ul>
-    <li th:each="buddy : ${buddies}">
+    <li th:each="buddy: ${addressBook.getMyBuddies()}">
         <strong th:text="${buddy.name}">Name</strong> -
         <span th:text="${buddy.phoneNumber}">Phone</span> -
         <span th:text="${buddy.address}">Address</span>
     </li>
 </ul>
-
+<a th:href="@{/addBuddy/{id}(id=${addressBook.id})}">Add a Buddy</a>
 </body>
 </html>

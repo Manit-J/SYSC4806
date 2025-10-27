@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Buddy</title>
+</head>
+<body>
+<a href="/">Home</a>
+<p>Please fill out this form:</p>
+<form th:action="@{/addBuddy}" th:object="${buddy}" method="post">
+    <input type="text" th:field="*{name}" placeholder="Name" />
+    <input type="text" th:field="*{address}" placeholder="Address" />
+    <input type="text" th:field="*{phoneNumber}" placeholder="Phone" />
+    <input type="hidden" name="addressBookId" th:value="${addressBookId}" />
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+<a th:href="@{/addressBooks/{id}(id=${buddy.addressBook.id})}">View Address Book</a>
+</body>
+</html>
